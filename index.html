@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="navStyle.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container-fluid pb-0">
+                    <a class="navbar-brand logo" href="#"
+                        style="font-family: 'Brush Script MT', cursive;font-size: 25pt;">YallahBee3</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="aboutus.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Resources.html">Resources</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contactUs.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="reviews.html">Reviews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="productServices.html">Services/Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="login.html">login</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex ms-3 search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-light" type="submit">Go</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+    </header>
+    </div>
+    <main>
+            <p id="d1"> </p>
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="carouselPhotos/photo1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Welcome to YallahBee3</h5>
+                        <p>World's best e-commerce website</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="carouselPhotos/photo2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Anything You Want</h5>
+                        <p>You won't have trouble finding your needs</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="carouselPhotos/photo3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Pay However You Want</h5>
+                        <p>From anywhere and however you want</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
+    <script>
+        var d = new Date();
+        document.getElementById("d1").innerHTML = d;
+        document.write(d.getDate() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear());
+        document.write(" " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds());
+        document.getElementById("d1").style.backgroundColor = "white";
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

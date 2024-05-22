@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="navStyle.css">
+    <style>
+        form textarea {
+            background-color:white;
+            border-radius: 10px;
+        }
+button {
+    background-color: rgb(58, 90, 250);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16pt;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    }
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+button a {
+    text-decoration: none;
+    color: #333;
+}
+
+.alert-button{
+    display: flex;
+margin:10px;
+align-items: center;
+}
+.alert-button input {
+            background-color: rgb(58, 90, 250);
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 16pt;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+        }
+
+        .alert-button input:hover {
+            background-color: #e0e0e0;
+        }
+
+        .alert-button input a {
+            text-decoration: none;
+            color: #333;
+        }
+        .reviews-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 10px;
+            margin-bottom:50px;
+        }
+     .review-box {
+            width: 30%;
+            background-color:rgb(58, 90, 250);
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .review-box h2 {
+            font-size: 16pt;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .review-box p {
+            font-size: 14pt;
+            color: white;
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid pb-0">
+                <a class="navbar-brand logo" href="#" style="font-family: 'Brush Script MT', cursive;font-size: 25pt;">YallahBee3</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Resources.html">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactUs.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reviews.html">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productServices.html">Services/Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="login.html">login</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex ms-3 search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-light" type="submit">Go</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <form style="margin: 30px;">
+            <h1>Tell us what do you think about our website</h1>
+            <br>
+            <div style="display: flex; align-items: center;">
+                <textarea rows="10" cols="40" style="margin-right: 20px;background-color:#ccc;">  Leave your feedback here...</textarea>
+                <div>
+                    <label for="enjoy-experience"><h1>Did you enjoy the experience?</h1></label>
+                    <br>
+                    <div class="alert-button">
+                    <input type="button" class="yes-button" onclick="alert('Thank you :)')" value="Yes" style="color: white;"><br>
+                    <input type="button" class="no-button" onclick="alert('Thank you :(')" value="No" style="color: white;"><br>
+                    </div>
+                </div>
+            </div>
+        </form>
+        
+        <hr>
+        <h1 style="margin: 30px;">Here's some of what our clients think about us</h1>
+        
+        <div class="reviews-container">
+            <div class="review-box">
+                <h2>Mohammed Ahmad</h2>
+                <p>"Great service and user-friendly interface. I highly recommend YallahBee3."</p>
+            </div>
+            <div class="review-box">
+                <h2>Omar Essam</h2>
+                <p>"I've had a fantastic experience using YallahBee3. It's made online transactions so much easier for me."</p>
+            </div>
+            <div class="review-box">
+                <h2>Ibrahim khasawneh</h2>
+                <p>"YallahBee3 has been a game-changer for me. I appreciate the convenience it offers."</p>
+            </div>
+            <div class="review-box">
+                <h2>Ali Bataineh</h2>
+                <p>"I'm impressed with the seamless transactions and quick response time of YallahBee3."</p>
+            </div>
+            <div class="review-box">
+                <h2>Safwan khalil</h2>
+                <p>"YallahBee3 has exceeded my expectations. It's intuitive and easy to navigate."</p>
+            </div>
+            <div class="review-box">
+                <h2>Mohammad Shwayyat<h2>
+                <p>"I've been using YallahBee3 for a while now, and it's been a pleasant experience overall."</p>
+            </div>
+            <div class="review-box">
+                <h2>Muneer Reziq</h2>
+                <p>"The customer support team at YallahBee3 is excellent. They've been very helpful whenever I had questions."</p>
+            </div>
+            <div class="review-box">
+                <h2>Omar Alkrad</h2>
+                <p>"YallahBee3 has made online shopping more enjoyable for me. It's reliable and secure."</p>
+            </div>
+            <div class="review-box">
+                <h2>Tariq ALbadri</h2>
+                <p>"I appreciate the efforts of the YallahBee3 team in providing a seamless online marketplace."</p>
+            </div>
+            <div class="review-box">
+                <h2>Hawwash</h2>
+                <p>"I love itt soo much nice website"</p>
+            </div>
+            <div class="review-box">
+                <h2>izz  </h2>
+                <p>"very good website to be honest"</p>
+            </div>
+            <div class="review-box">
+                <h2>mansi </h2>
+                <p>"I enjoyed shopping here thank you"</p>
+            </div>
+        </div>
+    
+      
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

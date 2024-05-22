@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Price Calculator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        body{
+background-image: url("pics/shopping-cart-filled-with-coins-copy-space-background\ \(1\).png");
+
+        }
+        .form-container {
+            margin: 110px auto;
+            padding: 20px;
+            border-radius: 30px;
+            border: 2px solid black;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            background-color: #d8e6f3;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+        }
+        .text-center {
+            margin-top: 20px;
+        }
+        textarea {
+            margin-top: 20px;
+            border-radius: 30px;
+            border: 1px solid black;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2 class="text-center">Item Price Calculator</h2>
+            <form id="priceForm">
+                <div class="form-group">
+                    <label for="itemPrice1">Item 1 Price:</label>
+                    <input type="text" class="form-control" id="itemPrice1" placeholder="Enter item 1 price">
+                    <div class="error-message" id="itemPrice1Error"></div>
+                    <label for="itemQuantity1">Item 1 Quantity:</label>
+                    <select class="form-control" id="itemQuantity1">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="itemPrice2">Item 2 Price:</label>
+                    <input type="text" class="form-control" id="itemPrice2" placeholder="Enter item 2 price">
+                    <div class="error-message" id="itemPrice2Error"></div>
+                    <label for="itemQuantity2">Item 2 Quantity:</label>
+                    <select class="form-control" id="itemQuantity2">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="calculateTotal()">Add Prices</button>
+                <button type="button" class="btn btn-danger" onclick="resetTotal()">Reset Total</button>
+            </form>
+            <div class="mt-4">
+                <label for="totalPrice">Total Price:</label>
+                <textarea id="totalPrice" class="form-control" rows="3" readonly></textarea>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        var total = 0;
+
+        function calculateTotal() {
+            
+            document.getElementById("itemPrice1Error").innerHTML = "";
+            document.getElementById("itemPrice2Error").innerHTML = "";
+
+           
+            var itemPrice1 = document.getElementById("itemPrice1").value;
+            var itemQuantity1 = document.getElementById("itemQuantity1").value;
+            var itemPrice2 = document.getElementById("itemPrice2").value;
+            var itemQuantity2 = document.getElementById("itemQuantity2").value;
+
+  
+            var valid = true;
+            var price = /^[0-9]+(\.[0-9]{1,2})?$/;
+
+            if (itemPrice1<0 || itemPrice1 == "") {
+                document.getElementById("itemPrice1Error").innerHTML = "Please enter a valid price.";
+                valid = false;
+            }
+            if (itemPrice2<0 || itemPrice2 == "") {
+                document.getElementById("itemPrice2Error").innerHTML = "Please enter a valid price.";
+                valid = false;
+            }
+
+           
+            if (valid) {
+                var itemTotal1 = itemPrice1* itemQuantity1;
+                var itemTotal2 = itemPrice2 * itemQuantity2;
+                total += itemTotal1 + itemTotal2;
+                document.getElementById("totalPrice").innerHTML = "Total Price: " + total + "$";
+            }
+        }
+
+        function resetTotal() {
+            total = 0;
+            document.getElementById("totalPrice").innerHTML = "Total Price: " + total +"$" ;
+        }
+    </script>
+</body>
+</html>

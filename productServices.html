@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="navStyle.css">
+  <style>
+    .video {
+      position: absolute;
+      display: flex;
+      border-radius: 23px;
+      box-shadow: 3px 3px 10px black, -3px -3px 10px black;
+      margin-left: 50%;
+      top: 285px;
+      transform: translateX(-50%);
+      width: 800px;
+      margin-top: 10px;
+    }
+
+
+    .box {
+      background-color: rgb(255, 255, 255);
+      border-style: solid;
+      border-color: rgb(58, 90, 250);
+      margin: 1.5cm;
+      border-radius: 0.5cm;
+      padding: 20px;
+      margin-top: 14px;
+    }
+
+    body {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-bottom: 50px;
+      margin-top: 10px;
+
+    }
+
+    .product {
+      background-color: #fff;
+      border-radius: 25px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 5);
+      padding: 20px;
+      margin: 10px;
+      width: 250px;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 25px;
+      margin-bottom: 10px;
+    }
+
+    .product h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .product p {
+      margin-bottom: 10px;
+    }
+
+    .product span {
+      font-weight: bold;
+    }
+
+    .product button {
+      background-color: rgb(58, 90, 250);
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .product button:hover {
+      background-color: #555;
+    }
+
+    .cal {
+      border-radius: 11px;
+      border-left: 2px solid;
+      border-top: 2px solid;
+      border-bottom: 2px solid;
+      border-right: 2px solid;
+      margin: 60px;
+      margin-left: 450px;
+      height: 15vh;
+      width: 90vh;
+      font-size: 4vh;
+      background-color: rgb(58, 90, 250);
+      font-family: "Jacquard 12", system-ui;
+      ;
+
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid pb-0">
+        <a class="navbar-brand logo" href="#"
+          style="font-family: 'Brush Script MT', cursive;font-size: 25pt;">YallahBee3</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto menu">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Resources.html">Resources</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactUs.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reviews.html">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="productServices.html">Services/Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="login.html">login</a>
+            </li>
+          </ul>
+          <form class="d-flex ms-3 search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-light" type="submit">Go</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <section style="display: flex; justify-content: space-around;">
+      <div class="box">
+        <h2 style="text-align: center; "> Buy </h2>
+        <p> Explore our range of products and services tailored to your needs. </p>
+        <a href="#">Start Shopping</a>
+      </div>
+      <div class="box">
+        <h2 style="text-align: center;"> Sell </h2>
+        <p> Join our platform to sell your products or services to a wider audience. </p>
+        <br> <br>
+        <a href="#">Proceed</a>
+      </div>
+      <!--<video autoplay loop muted plays-inline class="video">
+        <source src="pics/product and srevices video.mp4"type="video/mp4">
+    </video>-->
+    </section>
+    <section class="products">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img src="pics/71OGys4EQ+L._AC_SL1500_.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">SAMSUNG 34 Screen</h5>
+                <p class="card-text">100Hz, 350 nit, USB- C, Adjustable Stand, Intelligent Eye Care</p>
+                <b>$499</b>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img src="pics/cl.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Led Mirror Table Alarm</h5>
+                <p class="card-text">Night Light Desktop USB Alarm Clock Home Decor Smart Clock</p>
+                <b>$24.99</b>
+
+                <a href="#" class="btn btn-primary">Add to cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img src="pics/unnamed.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Handmade Rattan Serving Tray</h5>
+                <p class="card-text">Double Ear Tea Tray, Fruit Plate, Bread Snack Basket, Storage Woven Basket, Heat
+                  Insulation Trivet Mat</p>
+                <b>$2.99</b>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="pics/unnamed (1).jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Resin Flower Vase</h5>
+                  <p class="card-text">Suitable For Boho Wedding Party Home Decor, Aesthetic Room Décor, Spring Summer
+                    Decor</p>
+                  <b>$13.99</b>
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="pics/bagjpg.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Simple Canvas Tote Bag</h5>
+                  <p class="card-text">Multi Pockets Shoulder Bag, Versatile Handbag For School Commuter Shopping</p>
+                  <b>$4.80</b>
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="pics/squeeze.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Funny Squeeze Chicken</h5>
+                  <p class="card-text">Anti-Stress Tricky Toys Gag Children's Gift</p>
+                  <b>$2.50</b>
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="pics/Led.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Night Lights Note Board</h5>
+                  <p class="card-text">Creative LED Night Light USB Message Board Holiday Light With Pen Gift For
+                    Girlfriend Decoration Night Lamp</p>
+                  <b>$3.50</b>
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="pics/cat.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Unframed Canvas Poster</h5>
+                  <p class="card-text">Black Cat Coffee Poster, More Espresso Less Depresso Canvas Print, Ideal Gift For
+                    Bedroom Living</p>
+                  <b>$8.48</b>
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="pics/cup.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Java Script Coffee Preparing Code</h5>
+                  <p class="card-text">Black Glossy Mug</p>
+                  <b>$7.99</b>
+                  <a href="#" class="btn btn-primary">Add to cart </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <button href="calculations.html" class="cal" type="button"><a href="calculations.html"><b style="color: white;">go to
+        calculate</b></a> </button>
+
+</body>
+
+</html>

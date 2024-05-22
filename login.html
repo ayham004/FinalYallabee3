@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Information</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: lightslategrey;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .warpper {
+            padding: 20px;
+            background-color:rgb(246, 242, 243);
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px rgba(3, 3, 3, 0.1);
+            border: 3px solid rgb(107, 107, 107);
+        }
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .input-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .input-box input {
+            border-radius: 30px;
+            padding-right: 40px;
+        }
+        .input-box i {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #007bff;
+        }
+        .btn {
+            border-radius: 30px;
+        }
+        .register-link {
+            margin-top: 10px;
+        }
+        .register-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .register-link a:hover {
+            text-decoration: underline;
+            color: #ab444e;
+        }
+        .error-message {
+            color: #ab444e;
+            font-size: 0.9em;
+        }
+        textarea {
+            width: 100%;
+            max-width: 630px;
+            margin: 20px 0;
+            padding: 12px;
+            background-color: #e2f2ff;
+            border-radius: 8px;
+            border: 1px solid #ced4da;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="warpper">
+                    <form id="loginForm">
+                        <h1>Information</h1>
+                        <div class="input-box">
+                            <label for="name"><b>User Name</b></label><br>
+                            <input id="name"  type="text" class="form-control" placeholder="User Name">
+                            <i class='bx bxs-user'></i>
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+                        <div class="input-box">
+                            <label for="password" ><b>Password</b></label><br>
+                            <input id="password" type="password" class="form-control" placeholder="Password">
+                            <i class='bx bxs-lock-alt'></i>
+                            <div class="error-message" id="passwordError"></div>
+                        </div>
+                        <div class="input-box">
+                            <label for="email"><b>Email</b></label><br>
+                            <input id="email" type="email" class="form-control" placeholder="Email">
+                            <i class='bx bxs-envelope'></i>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        <div class="input-box">
+                            <label for="country"><b>Country</b></label><br>
+                            <input id="country" type="text" class="form-control" placeholder="Country">
+                            <i class='bx bxs-flag-alt'></i>
+                            <div class="error-message" id="countryError"></div>
+                        </div>
+                        <div class="input-box">
+                            <label for="city"><b>City</b></label><br>
+                            <input id="city" type="text" class="form-control" placeholder="City">
+                            <i class='bx bxs-city'></i>
+                            <div class="error-message" id="cityError"></div>
+                        </div>
+
+                        <div class="gender-box">
+                            <label for="male">Male</label>
+                            <input type="radio" id="male" name="gender" value="Male">
+                            <label for="female">Female</label>
+                            <input type="radio" id="female" name="gender" value="Female">
+                            <div class="error-message" id="genderError"></div>
+                        </div>
+
+                        <button type="button" onclick="ClickButton()" class="btn btn-primary">Move</button>
+                        <div class="register-link">
+                            <p class="text-center">Don't you trust? <br>know More  <a href="aboutUs.html">About uS ;)</a></p>
+                        </div>
+                        <textarea id="textarea" cols="40" rows="10" readonly ></textarea>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function ClickButton() {
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+            var email = document.getElementById("email").value;
+            var country = document.getElementById("country").value;
+            var city = document.getElementById("city").value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+
+            var isValid = true;
+            var summaryText = "";
+
+            if (!name) {
+                document.getElementById("name").style.backgroundColor = "red";
+                document.getElementById("nameError").innerHTML = "Name is required.";
+                isValid = false;
+            } else {
+                document.getElementById("name").style.backgroundColor = "white";
+                document.getElementById("nameError").innerHTML = "";
+            }
+
+            if (!password) {
+                document.getElementById("password").style.backgroundColor = "red";
+                document.getElementById("passwordError").innerHTML = "Password is required.";
+                isValid = false;
+            } else {
+                document.getElementById("password").style.backgroundColor = "white";
+                document.getElementById("passwordError").innerHTML = "";
+            }
+
+            if (!email) {
+                document.getElementById("email").style.backgroundColor = "red";
+                document.getElementById("emailError").innerHTML = "Email is required.";
+                isValid = false;
+            } else {
+                document.getElementById("email").style.backgroundColor = "white";
+                document.getElementById("emailError").innerHTML = "";
+            }
+
+            if (!country) {
+                document.getElementById("country").style.backgroundColor = "red";
+                document.getElementById("countryError").innerHTML = "Country is required.";
+                isValid = false;
+            } else {
+                document.getElementById("country").style.backgroundColor = "white";
+                document.getElementById("countryError").innerHTML = "";
+            }
+
+            if (!city) {
+                document.getElementById("city").style.backgroundColor = "red";
+                document.getElementById("cityError").innerHTML = "City is required.";
+                isValid = false;
+            } else {
+                document.getElementById("city").style.backgroundColor = "white";
+                document.getElementById("cityError").innerHTML = "";
+            }
+
+            if (!gender) {
+                document.getElementById("genderError").innerHTML = "Choose your gender.";
+                isValid = false;
+            } else {
+                document.getElementById("genderError").innerHTML = "";
+            }
+
+            if (isValid) {
+                summaryText = "Entered Name: " + name + "\n" +
+                              "Entered Email: " + email + "\n" +
+                              "Entered Country: " + country + "\n" +
+                              "Entered City: " + city + "\n" +
+                              "Gender: " + gender.value;
+                document.getElementById("textarea").innerHTML = summaryText;
+            }
+        }
+    </script>
+</body>
+</html>
